@@ -56,7 +56,7 @@ The project includes status code verification, response data validation, and JSO
 
 
 
-## 📊 How to Get the Report
+## How to Get the Report
 
 
 1. Go to the **Reports** folder 
