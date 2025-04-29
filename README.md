@@ -8,7 +8,7 @@ This project is an API automation test suite built using **Katalon Studio**, des
 The project includes status code verification, response data validation, and JSON Schema validation.
 
 
-## 🧱 Project Structure
+## Project Structure
 
 - Test Cases
     - Weather Forecast
@@ -25,14 +25,14 @@ The project includes status code verification, response data validation, and JSO
             - AirPollution-schema.json
 
 
-## ▶️ How to Run the Tests
+##  How to Run the Tests
 
-### 🖥️ Requirements
+### Requirements
 
 - Katalon Studio
 - An OpenWeatherMap API Key 
 
-### ✅ Steps
+### Steps
 
 1. **Clone or Download the Repository**
     git clone https://github.com/your-username/openweather-api-test.git
