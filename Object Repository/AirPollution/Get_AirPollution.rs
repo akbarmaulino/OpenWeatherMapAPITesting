@@ -18,7 +18,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://api.openweathermap.org/data/2.5/air_pollution?lat=${GlobalVariable.lat}&amp;lon=${GlobalVariable.lon}&amp;appid=${GlobalVariable.API_key}</restUrl>
+   <restUrl>${GlobalVariable.baseUrl}/air_pollution?lat=${GlobalVariable.lat}&amp;lon=${GlobalVariable.lon}&amp;appid=${GlobalVariable.API_key}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

@@ -1,18 +1,65 @@
-# Web Service Testing Samples
+# OpenWeatherMap API Automation Test (Katalon Studio)
 
-See https://docs.katalon.com/katalon-studio/docs/web-service-samples.html.
+This project is an API automation test suite built using **Katalon Studio**, designed to test endpoints from the [OpenWeatherMap API](https://openweathermap.org/api), including:
 
-## Companion products
+- **5-day Weather Forecast**
+- **Current Air Pollution Data**
 
-### Katalon TestOps
+The project includes status code verification, response data validation, and JSON Schema validation.
 
-[Katalon TestOps](https://analytics.katalon.com) is a web-based application that provides dynamic perspectives and an insightful look at your automation testing data. You can leverage your automation testing data by transforming and visualizing your data; analyzing test results; seamlessly integrating with such tools as Katalon Studio and Jira; maximizing the testing capacity with remote execution.
 
-* Read our [documentation](https://docs.katalon.com/katalon-analytics/docs/overview.html).
-* Ask a question on [Forum](https://forum.katalon.com/categories/katalon-analytics).
-* Request a new feature on [GitHub](CONTRIBUTING.md).
-* Vote for [Popular Feature Requests](https://github.com/katalon-analytics/katalon-analytics/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc).
-* File a bug in [GitHub Issues](https://github.com/katalon-analytics/katalon-analytics/issues).
+## 🧱 Project Structure
 
-### Katalon Studio
-[Katalon Studio](https://www.katalon.com) is a free and complete automation testing solution for Web, Mobile, and API testing with modern methodologies (Data-Driven Testing, TDD/BDD, Page Object Model, etc.) as well as advanced integration (JIRA, qTest, Slack, CI, Katalon TestOps, etc.). Learn more about [Katalon Studio features](https://www.katalon.com/features/).
+- Test Cases
+    - Weather Forecast
+    - Air Pollution
+- Object Repository
+    - Weather
+        - Get_WeatherForecast
+    - AirPollution
+        - Get_AirPollution
+- Include
+    - resources
+        - schemas
+            - weather-schema.json
+            - AirPollution-schema.json
+
+
+## ▶️ How to Run the Tests
+
+### 🖥️ Requirements
+
+- Katalon Studio
+- An OpenWeatherMap API Key 
+
+### ✅ Steps
+
+1. **Clone or Download the Repository**
+    git clone https://github.com/your-username/openweather-api-test.git
+
+2. **Open Project in Katalon Studio**
+    - Launch Katalon Studio
+    - Select **File > Open Project** and choose this project directory
+
+3. **Set API Key in Profile**
+    - Go to **Profiles > default**
+    - Set your API Key and Base URL:
+      GlobalVariable.api_key = 'API_Key'
+      GlobalVariable.base_url = 'https://api.openweathermap.org/data/2.5'
+
+
+4. **Run Test Cases**
+    - Navigate to **Test Cases**
+    - Right-click on `Weather Forecast` or `Air Pollution` and select **Run**
+
+5. **View Console Output**
+
+
+
+## 📊 How to Get the Report
+
+
+1. Go to the **Reports** folder 
+2. Each test run will have a timestamped folder
+3. Inside each folder:
+    - `report.html`
