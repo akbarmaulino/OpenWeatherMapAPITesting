@@ -2,24 +2,29 @@ name: Run Katalon Tests
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   run-katalon-tests:
     runs-on: ubuntu-latest
 
     steps:
+    # Checkout source code from repository
     - name: Checkout source code
       uses: actions/checkout@v3
 
+    # Install Katalon Studio Engine
     - name: Install Katalon CLI
       run: |
         wget https://github.com/katalon-studio/katalon-studio/releases/download/v8.6.5/Katalon_Studio_Engine_Linux_64-8.6.5.tar.gz
         tar -xzf Katalon_Studio_Engine_Linux_64-8.6.5.tar.gz
         chmod +x Katalon_Studio_Engine_Linux_64-8.6.5/katalonc
 
+    # Run Katalon Test Suite
     - name: Run Katalon Test Suite
       run: |
         ./Katalon_Studio_Engine_Linux_64-8.6.5/katalonc \
