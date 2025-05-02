@@ -33,6 +33,7 @@ jobs:
         nohup Xvfb :99 -screen 0 1024x768x24 &
         export DISPLAY=:99
         
+        # Run Katalon in headless mode with --no-sandbox for Chrome
         ./Katalon_Studio_Engine_Linux_64-8.6.5/katalonc \
           -noSplash \
           -runMode=console \
@@ -41,4 +42,5 @@ jobs:
           -testSuitePath="Test Suites/TS-001" \
           -executionProfile="default" \
           -browserType="Chrome (headless)" \
-          -apiKey="${{ secrets.KATALON_API_KEY }}"
+          -apiKey="${{ secrets.KATALON_API_KEY }}" \
+          --no-sandbox
