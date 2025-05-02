@@ -14,12 +14,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Run Katalon with Docker
+    - name: Show directory structure
       run: |
-        docker run --rm -v "$PWD":/katalon/katalon/source:ro \
+        echo "Project structure:"
+        ls -R
+
+    - name: Run Katalon in Docker
+      run: |
+        docker run --rm -v "$PWD":/katalon/katalon/source \
           katalonstudio/katalon:8.6.5 \
           katalonc -noSplash -runMode=console \
-          -projectPath=/katalon/katalon/source/web-service-tests.prj \
+          -projectPath="/katalon/katalon/source/web-service-tests.prj" \
           -retry=0 \
           -testSuitePath="Test Suites/TS-001" \
           -executionProfile="default" \
