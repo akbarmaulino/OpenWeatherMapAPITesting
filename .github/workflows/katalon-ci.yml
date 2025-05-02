@@ -17,16 +17,22 @@ jobs:
     - name: Checkout source code
       uses: actions/checkout@v3
 
-    # Install Katalon Studio Engine
-    - name: Install Katalon CLI
+    # Install Katalon Studio Engine and dependencies for headless tests
+    - name: Install Katalon CLI and dependencies
       run: |
+        sudo apt-get update
+        sudo apt-get install -y libnss3 xvfb
         wget https://github.com/katalon-studio/katalon-studio/releases/download/v8.6.5/Katalon_Studio_Engine_Linux_64-8.6.5.tar.gz
         tar -xzf Katalon_Studio_Engine_Linux_64-8.6.5.tar.gz
         chmod +x Katalon_Studio_Engine_Linux_64-8.6.5/katalonc
 
-    # Run Katalon Test Suite (headless mode for Chrome)
+    # Run Katalon Test Suite with headless mode for Chrome
     - name: Run Katalon Test Suite
       run: |
+        # Start Xvfb (X Virtual Frame Buffer) for headless browser testing
+        nohup Xvfb :99 -screen 0 1024x768x24 &
+        export DISPLAY=:99
+        
         ./Katalon_Studio_Engine_Linux_64-8.6.5/katalonc \
           -noSplash \
           -runMode=console \
