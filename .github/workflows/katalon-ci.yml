@@ -24,7 +24,7 @@ jobs:
         tar -xzf Katalon_Studio_Engine_Linux_64-8.6.5.tar.gz
         chmod +x Katalon_Studio_Engine_Linux_64-8.6.5/katalonc
 
-    # Run Katalon Test Suite
+    # Run Katalon Test Suite (headless mode for Chrome)
     - name: Run Katalon Test Suite
       run: |
         ./Katalon_Studio_Engine_Linux_64-8.6.5/katalonc \
@@ -34,5 +34,5 @@ jobs:
           -retry=0 \
           -testSuitePath="Test Suites/TS-001" \
           -executionProfile="default" \
-          -browserType="Chrome" \
+          -browserType="Chrome (headless)" \
           -apiKey="${{ secrets.KATALON_API_KEY }}"
