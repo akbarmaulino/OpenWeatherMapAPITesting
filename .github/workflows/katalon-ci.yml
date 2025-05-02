@@ -1,41 +1,27 @@
-name: Run Katalon Tests
+name: Run Katalon Tests with Docker
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  run-katalon-tests:
+  katalon:
     runs-on: ubuntu-latest
 
     steps:
-    # Checkout source code from repository
-    - name: Checkout source code
+    - name: Checkout code
       uses: actions/checkout@v3
 
-    # Install Katalon Studio Engine and dependencies for headless tests
-    - name: Install Katalon CLI and dependencies
+    - name: Run Katalon with Docker
       run: |
-        sudo apt-get update
-        sudo apt-get install -y libnss3
-        wget https://github.com/katalon-studio/katalon-studio/releases/download/v8.6.5/Katalon_Studio_Engine_Linux_64-8.6.5.tar.gz
-        tar -xzf Katalon_Studio_Engine_Linux_64-8.6.5.tar.gz
-        chmod +x Katalon_Studio_Engine_Linux_64-8.6.5/katalonc
-
-    # Run Katalon Test Suite in headless mode without Xvfb
-    - name: Run Katalon Test Suite
-      run: |
-        ./Katalon_Studio_Engine_Linux_64-8.6.5/katalonc \
-          -noSplash \
-          -runMode=console \
-          -projectPath="$GITHUB_WORKSPACE/web-service-tests.prj" \
+        docker run --rm -v "$PWD":/katalon/katalon/source:ro \
+          katalonstudio/katalon:8.6.5 \
+          katalonc -noSplash -runMode=console \
+          -projectPath=/katalon/katalon/source/web-service-tests.prj \
           -retry=0 \
           -testSuitePath="Test Suites/TS-001" \
           -executionProfile="default" \
           -browserType="Chrome (headless)" \
-          -apiKey="${{ secrets.KATALON_API_KEY }}" \
-          --no-sandbox
+          -apiKey="${{ secrets.KATALON_API_KEY }}"
