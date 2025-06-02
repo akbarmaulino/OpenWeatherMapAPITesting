@@ -41,7 +41,7 @@
                   "type": "number"
                 },
                 "no": {
-                  "type": "integer"
+                  "type": "number"
                 },
                 "no2": {
                   "type": "number"
