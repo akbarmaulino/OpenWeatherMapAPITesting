@@ -125,18 +125,7 @@
               "type": "integer"
             },
             "pop": {
-              "type": "number"
-            },
-            "rain": {
-              "type": "object",
-              "properties": {
-                "3h": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "3h"
-              ]
+              "type": "integer"
             },
             "sys": {
               "type": "object",
@@ -161,7 +150,6 @@
             "wind",
             "visibility",
             "pop",
-            "rain",
             "sys",
             "dt_txt"
           ]
@@ -697,18 +685,7 @@
               "type": "integer"
             },
             "pop": {
-              "type": "number"
-            },
-            "rain": {
-              "type": "object",
-              "properties": {
-                "3h": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "3h"
-              ]
+              "type": "integer"
             },
             "sys": {
               "type": "object",
@@ -733,615 +710,6 @@
             "wind",
             "visibility",
             "pop",
-            "rain",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
-                  "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "number"
-            },
-            "rain": {
-              "type": "object",
-              "properties": {
-                "3h": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "3h"
-              ]
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "rain",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
-                  "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "number"
-            },
-            "rain": {
-              "type": "object",
-              "properties": {
-                "3h": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "3h"
-              ]
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "rain",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
-                  "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "integer"
-            },
-            "rain": {
-              "type": "object",
-              "properties": {
-                "3h": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "3h"
-              ]
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "rain",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
-                  "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "number"
-            },
-            "rain": {
-              "type": "object",
-              "properties": {
-                "3h": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "3h"
-              ]
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "rain",
             "sys",
             "dt_txt"
           ]
@@ -2905,7 +2273,18 @@
               "type": "integer"
             },
             "pop": {
-              "type": "integer"
+              "type": "number"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
             },
             "sys": {
               "type": "object",
@@ -2930,6 +2309,311 @@
             "wind",
             "visibility",
             "pop",
+            "rain",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "number"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "number"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "rain",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "integer"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "number"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "rain",
             "sys",
             "dt_txt"
           ]
@@ -3047,6 +2731,17 @@
             "pop": {
               "type": "integer"
             },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
             "sys": {
               "type": "object",
               "properties": {
@@ -3070,6 +2765,7 @@
             "wind",
             "visibility",
             "pop",
+            "rain",
             "sys",
             "dt_txt"
           ]
@@ -3187,6 +2883,17 @@
             "pop": {
               "type": "integer"
             },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
             "sys": {
               "type": "object",
               "properties": {
@@ -3210,6 +2917,7 @@
             "wind",
             "visibility",
             "pop",
+            "rain",
             "sys",
             "dt_txt"
           ]
@@ -3327,6 +3035,17 @@
             "pop": {
               "type": "integer"
             },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
             "sys": {
               "type": "object",
               "properties": {
@@ -3350,6 +3069,7 @@
             "wind",
             "visibility",
             "pop",
+            "rain",
             "sys",
             "dt_txt"
           ]
@@ -3465,7 +3185,18 @@
               "type": "integer"
             },
             "pop": {
-              "type": "integer"
+              "type": "number"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
             },
             "sys": {
               "type": "object",
@@ -3490,6 +3221,7 @@
             "wind",
             "visibility",
             "pop",
+            "rain",
             "sys",
             "dt_txt"
           ]
@@ -3605,7 +3337,18 @@
               "type": "integer"
             },
             "pop": {
-              "type": "integer"
+              "type": "number"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
             },
             "sys": {
               "type": "object",
@@ -3630,6 +3373,7 @@
             "wind",
             "visibility",
             "pop",
+            "rain",
             "sys",
             "dt_txt"
           ]
@@ -3732,7 +3476,7 @@
                   "type": "integer"
                 },
                 "gust": {
-                  "type": "number"
+                  "type": "integer"
                 }
               },
               "required": [
@@ -3787,847 +3531,7 @@
                   "type": "number"
                 },
                 "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
                   "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "integer"
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
-                  "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "integer"
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
-                  "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "integer"
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
-                  "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "integer"
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
-                  "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "integer"
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
-                },
-                "temp_min": {
-                  "type": "number"
-                },
-                "temp_max": {
-                  "type": "number"
-                },
-                "pressure": {
-                  "type": "integer"
-                },
-                "sea_level": {
-                  "type": "integer"
-                },
-                "grnd_level": {
-                  "type": "integer"
-                },
-                "humidity": {
-                  "type": "integer"
-                },
-                "temp_kf": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "temp",
-                "feels_like",
-                "temp_min",
-                "temp_max",
-                "pressure",
-                "sea_level",
-                "grnd_level",
-                "humidity",
-                "temp_kf"
-              ]
-            },
-            "weather": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "main": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "main",
-                    "description",
-                    "icon"
-                  ]
-                }
-              ]
-            },
-            "clouds": {
-              "type": "object",
-              "properties": {
-                "all": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "all"
-              ]
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "speed": {
-                  "type": "number"
-                },
-                "deg": {
-                  "type": "integer"
-                },
-                "gust": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "speed",
-                "deg",
-                "gust"
-              ]
-            },
-            "visibility": {
-              "type": "integer"
-            },
-            "pop": {
-              "type": "integer"
-            },
-            "sys": {
-              "type": "object",
-              "properties": {
-                "pod": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "pod"
-              ]
-            },
-            "dt_txt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "dt",
-            "main",
-            "weather",
-            "clouds",
-            "wind",
-            "visibility",
-            "pop",
-            "sys",
-            "dt_txt"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dt": {
-              "type": "integer"
-            },
-            "main": {
-              "type": "object",
-              "properties": {
-                "temp": {
-                  "type": "number"
-                },
-                "feels_like": {
-                  "type": "number"
                 },
                 "temp_min": {
                   "type": "number"
@@ -4992,7 +3896,7 @@
                   "type": "integer"
                 },
                 "gust": {
-                  "type": "integer"
+                  "type": "number"
                 }
               },
               "required": [
@@ -5006,6 +3910,906 @@
             },
             "pop": {
               "type": "number"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "rain",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "number"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "number"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "rain",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "number"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "integer"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "rain",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "number"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "integer"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "rain",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "number"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "integer"
+            },
+            "rain": {
+              "type": "object",
+              "properties": {
+                "3h": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "3h"
+              ]
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "rain",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "number"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "integer"
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "number"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "integer"
             },
             "sys": {
               "type": "object",
@@ -5754,6 +5558,286 @@
             "visibility",
             "pop",
             "rain",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "number"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "number"
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "sys",
+            "dt_txt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "integer"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "integer"
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
             "sys",
             "dt_txt"
           ]

@@ -13,33 +13,49 @@ import groovy.json.JsonSlurper as JsonSlurper
 import internal.GlobalVariable as GlobalVariable
 import org.assertj.core.api.Assertions.*
 
-// Kirim request dan ambil output
 def myOutput = WS.sendRequest(findTestObject('Weather/Get_WeatherForecast'))
 
-// Verifikasi status code
 WS.verifyResponseStatusCode(myOutput, 200)
-
-// Verifikasi nama kota
 WS.verifyElementPropertyValue(myOutput, 'city.name', 'Jagakarsa')
 
-
-
 try {
-	def schemaPath = 'Include/resources/schemas/weather-schema.json'
-	
-	def schemaFile = new File(schemaPath)
-	
-	def jsonSchema = new JSONObject(new JSONTokener(schemaFile.newReader()))
-	
-	Schema schema = SchemaLoader.load(jsonSchema)
-	
-	def responseJson = new JSONObject(myOutput.getResponseText())
-	
-	schema.validate(responseJson)
-	
-	KeywordUtil.logInfo('Response matches the JSON schema')
+    def schemaPath = 'Include/resources/schemas/weather-schema.json'  // lokasi file schema
+    def schemaFile = new File(schemaPath)
+    def jsonSchema = new JSONObject(new JSONTokener(schemaFile.newReader()))
+    Schema schema = SchemaLoader.load(jsonSchema)
 
+    def responseJson = new JSONObject(myOutput.getResponseText())
+    schema.validate(responseJson)  // validasi JSON
+
+    KeywordUtil.logInfo('Response sesuai dengan JSON schema')
 } catch (Exception e) {
-	KeywordUtil.markFailed("Validation failed: " + e.getMessage())
+    KeywordUtil.markFailed("Validasi schema gagal: " + e.getMessage())
 }
 
+def slurper = new JsonSlurper()
+def parsedResponse = slurper.parseText(myOutput.getResponseText())
+
+def forecastList = parsedResponse.list
+
+// Ambil dan grup berdasarkan tanggal (yyyy-MM-dd)
+def groupedByDate = forecastList.groupBy { it.dt_txt.split(' ')[0] }
+
+// Urutkan berdasarkan tanggal
+def sortedDates = groupedByDate.keySet().sort()
+
+KeywordUtil.logInfo("Cuaca berdasarkan tanggal dan jam (diurutkan):")
+
+// Loop per tanggal
+sortedDates.each { date ->
+    KeywordUtil.logInfo("Tanggal: ${date}")
+    
+    // Ambil list item untuk tanggal ini, urutkan berdasarkan jam
+    def items = groupedByDate[date].sort { it.dt_txt }
+    
+    // Loop dan print jam + deskripsi cuaca
+    items.each { item ->
+        def time = item.dt_txt.split(' ')[1]
+        def weatherDesc = item.weather[0].description
+        KeywordUtil.logInfo("  Jam ${time} : Cuaca -> ${weatherDesc}")
+    }
+}
